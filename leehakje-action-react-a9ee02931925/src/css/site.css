@@ -1,0 +1,6 @@
+.current-list-marker {
+    background: rgba(233,69,103,.8);
+}
+.current-focus {
+    z-index: 999999999 !important;
+}

@@ -1,0 +1,71 @@
+{
+  "env": {
+	"browser": true,
+	"es6": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    /* 탭 */
+    "indent": 0,
+    "no-tabs": 0,
+    "semi": 0,
+    "react/jsx-indent": 0,
+    "react/jsx-indent-props": 0,
+    /* .jsx */
+    "react/jsx-filename-extension": 0,
+    "function-paren-newline": 0,
+    /*
+    특정 문법이 안되는데 이유를...
+    https://eslint.org/docs/rules/prefer-const
+    */
+    "key-spacing": 1,
+    /*
+    클래스 선언의 변수 수정 금지
+    https://eslint.org/docs/rules/no-class-assign
+    */
+    "no-class-assign": 1,
+    /*
+    특정 문법이 안되는데 이유를...
+    https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
+    */
+    "react/forbid-prop-types": 1,
+    /*
+    es 2015문법.. 사용안하려 했지만 최신 문법 적용을 결정
+    https://eslint.org/docs/rules/arrow-body-style
+    */
+    "arrow-body-style": 0,
+    /*
+    최신 react 문법인 React.PureComponent 사용
+    https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
+    */
+    "react/prefer-stateless-function": [0, { "ignorePureComponents": 2 }],
+    /*
+    다음맵 문법을 받아들이지 못함
+    https://eslint.org/docs/rules/object-shorthand
+    https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
+    */
+    "object-shorthand": 0,
+    "react/sort-comp": 0,
+    /*
+    click event 에서 (파람) 형식이 아닌 this 형식으로 사용해라고 해서 거절 고민했지만
+    함수 호출도 파라메터를 못넣게해서...
+    https://eslint.org/docs/rules/class-methods-use-this
+    */
+    "class-methods-use-this": 0,
+    /*
+    router4가 eslint규칙에 없음 예외추가
+    https://github.com/evcohen/eslint-plugin-jsx-a11y/issues/340
+    */
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ]
+    }],
+    /*
+    i tag때문에 사용할수 밖에 없음
+    */
+    "react/jsx-closing-tag-location": 0,
+    "max-len":0,
+  }
+}
